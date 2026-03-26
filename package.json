@@ -1,0 +1,15 @@
+{
+  "name": "aggregator-website",
+  "version": "1.0.0",
+  "description": "Multi-engine aggregated search website with Node.js backend and vanilla frontend",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
