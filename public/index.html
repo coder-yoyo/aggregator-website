@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meta Search Aggregator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Meta Search Aggregator</h1>
+      <p class="subtitle">Search multiple engines in one query, then rank and merge the results.</p>
+
+      <form id="search-form" class="search-panel">
+        <div class="row">
+          <input id="query" name="query" type="text" placeholder="Try: latest AI coding models" required />
+          <button type="submit">Search</button>
+        </div>
+
+        <fieldset id="engine-options" class="engines">
+          <legend>Search Engines</legend>
+          <label><input type="checkbox" value="bing" checked /> Bing</label>
+          <label><input type="checkbox" value="duckduckgo" checked /> DuckDuckGo</label>
+          <label><input type="checkbox" value="wikipedia" checked /> Wikipedia</label>
+        </fieldset>
+      </form>
+
+      <section id="status" class="status"></section>
+      <section id="errors" class="errors"></section>
+      <section id="aggregated-results"></section>
+    </main>
+
+    <template id="result-template">
+      <article class="result-item">
+        <h3><a target="_blank" rel="noopener noreferrer"></a></h3>
+        <p class="url"></p>
+        <p class="snippet"></p>
+        <p class="meta"></p>
+      </article>
+    </template>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
